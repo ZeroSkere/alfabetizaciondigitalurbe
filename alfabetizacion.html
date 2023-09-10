@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alfabetización Digital</title>
+    <style>
+        body {
+            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.urbe.edu%2Funiversidad%2Fhistoria.html&psig=AOvVaw3sTjS-l9AqVInB-wKR_xNd&ust=1693698453455000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNCX6LnMioEDFQAAAAAdAAAAABAa'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mejorar la legibilidad */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .titulo {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+        }
+
+        .subtitulos {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .subtitulo {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .descripcion {
+            display: none;
+            margin: 10px 0;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+            color: #333;
+        }
+
+        /* Agregamos un enlace a la fuente de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="titulo">ALFABETIZACIÓN DIGITAL</div>
+        <div class="subtitulos">
+            <div class="subtitulo" onclick="mostrarDescripcion('mision')">MISIÓN</div>
+            <div class="descripcion" id="mision">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+            </div>
+            <div class="subtitulo" onclick="mostrarDescripcion('vision')">VISIÓN</div>
+            <div class="descripcion" id="vision">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+            </div>
+            <div class="subtitulo" onclick="mostrarDescripcion('nosotros')">SOBRE NOSOTROS</div>
+            <div class="descripcion" id="nosotros">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="contenido">
+        <!-- Contenido de tu página aquí -->
+    </div>
+
+    <script>
+        function mostrarDescripcion(id) {
+            var descripcion = document.getElementById(id);
+            if (descripcion) {
+                if (descripcion.style.maxHeight) {
+                    descripcion.style.maxHeight = null; // Oculta la descripción
+                } else {
+                    descripcion.style.maxHeight = descripcion.scrollHeight + "px"; // Muestra la descripción completa
+                }
+            }
+        }
+    </script>
+</body>
+</html>
